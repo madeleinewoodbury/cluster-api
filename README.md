@@ -32,6 +32,14 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
+### Environment Variables
+To configure CORS for your FastAPI application, set the `CORS_ORIGINS` environment variable. This variable should include a comma-separated list of allowed origins for your API. 
+
+Example `.env` file:
+```env
+CORS_ORIGINS=http://localhost:3000,https://your-deployed-frontend-url.com
+```
+This ensures that only the specified domains can access your API. Make sure to update the `CORS_ORIGINS` value with your actual frontend URLs.
 ## Usage
 
 ### Running the API
@@ -85,17 +93,17 @@ This API will be available at `http://127.0.0.1:8000`.
 - **Request Body:**
 ```json
 {
-  "algorithm": "kmeans",   // Supported algorithms: "kmeans", "dbscan", "birch", "mean_shift"
-  "dataset": "breast_cancer", // Name of the dataset to use
-  "use_pca": false         // Boolean flag to use PCA
+  "algorithm": "kmeans",   
+  "dataset": "breast_cancer", 
+  "use_pca": false         
 }
 ```
 - **Response:**
 ```json
 {
-  "labels": [0, 1, 2, ...], // Cluster labels for each data point
-  "data": [[x1, x2], [y1, y2], ...], // Data points (PCA transformed or scaled)
-  "feature_names": ["feature1", "feature2", ...] // Names of features (or "PC1", "PC2" for PCA)
+  "labels": [], 
+  "data": [], 
+  "feature_names": [] 
 }
 ```
 
