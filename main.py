@@ -5,7 +5,6 @@ from app.routes import clustering
 app = FastAPI()
 
 origins = [
-    'http://localhost:3000',
     'https://clustering-algorithms.vercel.app'
 ]
 
