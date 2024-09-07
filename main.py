@@ -6,7 +6,7 @@ app = FastAPI()
 
 origins = [
     'http://localhost:3000',
-    'https://clustering-algorithms.vercel.app/'
+    'https://clustering-algorithms.vercel.app'
 ]
 
 app.add_middleware(
