@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import clustering
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 app = FastAPI()
 
-origins = [
-    'https://clustering-algorithms.vercel.app'
-]
+origins = os.getenv("CORS_ORIGINS").split(",")
 
 app.add_middleware(
     CORSMiddleware,
