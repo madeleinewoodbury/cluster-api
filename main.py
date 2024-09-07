@@ -20,5 +20,5 @@ app.include_router(clustering.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Clustering Algorithms API is up and running!"}
 
