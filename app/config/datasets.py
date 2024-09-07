@@ -10,10 +10,10 @@ class DatasetType(Enum):
 class DatasetList:
     def __init__(self):
         self.datasets = {
-            DatasetType.BREAST_CANCER: "Breast cancer dataset for classification.",
-            DatasetType.DIGITS: "Handwritten digits dataset for classification.",
-            DatasetType.IRIS: "Iris flower dataset for classification.",
-            DatasetType.WINE: "Wine recognition dataset for classification.",
+            DatasetType.BREAST_CANCER: "Breast cancer dataset",
+            DatasetType.DIGITS: "Handwritten digits dataset.",
+            DatasetType.IRIS: "Iris flower dataset",
+            DatasetType.WINE: "Wine recognition dataset",
         }
 
     def contains(self, name) -> bool:
