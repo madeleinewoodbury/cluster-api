@@ -30,7 +30,7 @@ class AlgorithmList:
         if algorithm == AlgorithmType.BIRCH.value:
             return Birch(n_clusters=3)
         if algorithm == AlgorithmType.DBSCAN.value:
-            return DBSCAN(eps=1.0, min_samples=5)
+            return DBSCAN(eps=1.0, min_samples=2)
         if algorithm == AlgorithmType.KMEANS.value:
             return KMeans(n_clusters=3)
         if algorithm == AlgorithmType.MEAN_SHIFT.value:
